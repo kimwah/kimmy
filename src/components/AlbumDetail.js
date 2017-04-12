@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
+// <Button title="Click Me" color="#87CEFA" style={{ flex: 1 }} />
 
 const AlbumDetail = (props) => {   
   //const AlbumDetail = ({album}) => {    //Destructuring the props
@@ -17,9 +19,14 @@ const AlbumDetail = (props) => {
             <Text>{props.album.artist+"!!?"}</Text>
           </View>
       </CardSection>
+
       <CardSection>
           <Image source={{uri: props.album.image}} style={styles.imageStyle} />
-      </CardSection>    
+      </CardSection>   
+
+      <CardSection>
+         <Button />
+      </CardSection>       
     </Card>
   );
 };
