@@ -18,6 +18,7 @@ const AlbumDetail = (props) => {
           </View>
       </CardSection>
       <CardSection>
+          <Image source={{uri: props.album.image}} style={styles.imageStyle} />
       </CardSection>    
     </Card>
   );
@@ -39,9 +40,15 @@ const styles = {
         height: 50,
         width: 50
     },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
+        //alignSelf: 'stretch'
+    },    
     thumbnailContainerStyle: {
         justifyContent: 'center',
-        alignItem: 'center',
+        alignItems: 'center',
         marginLeft: 10,
         marginRight: 10
     },
